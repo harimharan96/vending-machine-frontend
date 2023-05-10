@@ -1,0 +1,18 @@
+<div class="container">
+    <ul>
+        <li *ngFor="let data of products; let i = index">
+            <div class="cards">
+                <div class="card-image"><img src="{{data.imgUrl}}" alt="img"></div>
+                <div class="card-title">{{data.title}}</div>
+                <div class="card-price">{{data.price | currency:"INR" }}</div>
+                <div class="btns">
+                    <div class="cart-btn"><button class="btn" (click)="addToCart(data)">Add to cart</button></div>
+                    <div class="info-btn"><button class="btn" (click)="info(i)">Info</button></div>
+                </div>
+                <div *ngIf="isInfo && showIndex === i" class="info">
+                    <p>{{data.info}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

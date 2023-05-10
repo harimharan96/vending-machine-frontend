@@ -1,0 +1,20 @@
+.table {
+    width: 90vw;
+    text-align: center;
+    border: 1px solid;
+}
+
+.container {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+thead {
+    background-color: beige;
+
+}
+
+tr {
+    height: 3rem;
+}
